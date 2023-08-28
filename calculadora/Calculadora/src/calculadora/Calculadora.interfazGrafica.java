@@ -383,16 +383,60 @@ catch(Exception erroresprod){
     }//GEN-LAST:event_raizActionPerformed
 
     private void senoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senoActionPerformed
-    
+        operacion.setText("sin");
+    try{
+    String x0= num1.getText();
+    String y0= num2.getText();
+    float x = Float.valueOf(x0);
+    float y = Float.valueOf(y0);
+    double seno=Math.sin(x);
+    System.out.println(x+"+"+y+"="+seno);
+    seno=Math.round(seno*100.0)/100.0;
+    String s=Double.toString(seno);
+    respuesta.setText(s);
+        }
+catch(Exception erroresprod){
+    System.out.println("Se ha producido un error al entrar los datos: "+erroresprod);
+    System.out.println("Vuelva a ingresar los datos");
+}
     }//GEN-LAST:event_senoActionPerformed
 
     private void cosenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosenoActionPerformed
-    
+    operacion.setText("cos");
+    try{
+    String x0= num1.getText();
+    String y0= num2.getText();
+    float x = Float.valueOf(x0);
+    float y = Float.valueOf(y0);
+    double coseno=Math.cos(x);
+    System.out.println(x+"+"+y+"="+coseno);
+    coseno=Math.round(coseno*100.0)/100.0;
+    String s=Double.toString(coseno);
+    respuesta.setText(s);
+        }
+catch(Exception erroresprod){
+    System.out.println("Se ha producido un error al entrar los datos: "+erroresprod);
+    System.out.println("Vuelva a ingresar los datos");
+}
     }//GEN-LAST:event_cosenoActionPerformed
 
     private void tangenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tangenteActionPerformed
-    
-
+    operacion.setText("tan");
+    try{
+    String x0= num1.getText();
+    String y0= num2.getText();
+    float x = Float.valueOf(x0);
+    float y = Float.valueOf(y0);
+    double tangente=Math.tan(x);
+    System.out.println(x+"+"+y+"="+tangente);
+    tangente=Math.round(tangente*100.0)/100.0;
+    String s=Double.toString(tangente);
+    respuesta.setText(s);
+        }
+catch(Exception erroresprod){
+    System.out.println("Se ha producido un error al entrar los datos: "+erroresprod);
+    System.out.println("Vuelva a ingresar los datos");
+}
     }//GEN-LAST:event_tangenteActionPerformed
 
     /**
