@@ -2,7 +2,7 @@ package calculadora;
 
  /* Valentina Cardenas Mercado*/
 
-public class Calculadora.interfazGrafica extends javax.swing.JFrame {
+public class interfazGrafica extends javax.swing.JFrame {
 
     public interfazGrafica() {
         initComponents();
@@ -317,7 +317,23 @@ catch(Exception erroresprod){
     }//GEN-LAST:event_divisionActionPerformed
 
     private void potenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potenciaActionPerformed
-    
+    operacion.setText("a^b");
+    try{
+    String x0= num1.getText();
+    String y0= num2.getText();
+    float x = Float.valueOf(x0);
+    float y = Float.valueOf(y0);
+    double potencia=Math.pow(x,y);
+    System.out.println(x+"+"+y+"="+potencia);
+    potencia=Math.round(potencia*100.0)/100.0;
+    String s=Double.toString(potencia);
+    respuesta.setText(s);
+        }
+catch(Exception erroresprod){
+    System.out.println("Se ha producido un error al entrar los datos: "+erroresprod);
+    System.out.println("Vuelva a ingresar los datos");
+}
+
     }//GEN-LAST:event_potenciaActionPerformed
 
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
@@ -349,7 +365,21 @@ catch(Exception erroresprod){
     }//GEN-LAST:event_IVAActionPerformed
 
     private void raizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raizActionPerformed
-    
+    operacion.setText("<html><strong>&#8730;</strong></html>");
+    try{
+    String x0= num1.getText();
+    String y0= num2.getText();
+    float x = Float.valueOf(x0);
+    float y = Float.valueOf(y0);
+    double raiz=Math.pow(x,1.0/y);
+    System.out.println(x+"+"+y+"="+raiz);
+    String s=Double.toString(raiz);
+    respuesta.setText(s);
+        }
+catch(Exception erroresprod){
+    System.out.println("Se ha producido un error al entrar los datos: "+erroresprod);
+    System.out.println("Vuelva a ingresar los datos");
+}
     }//GEN-LAST:event_raizActionPerformed
 
     private void senoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senoActionPerformed
