@@ -361,7 +361,23 @@ catch(Exception erroresprod){
     }//GEN-LAST:event_num1ActionPerformed
 
     private void IVAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IVAActionPerformed
-    
+        operacion.setText("IVA");
+    try{
+    String x0= num1.getText();
+    String y0= num2.getText();
+    float x = Float.valueOf(x0);
+    float y = Float.valueOf(y0);
+    double IVA=(x*y)/2;
+    System.out.println(x+"+"+y+"="+IVA);
+    IVA=Math.round(IVA*100.0)/100.0;
+    String s=Double.toString(IVA);
+    respuesta.setText(s);
+        }
+catch(Exception erroresprod){
+    System.out.println("Se ha producido un error al entrar los datos: "+erroresprod);
+    System.out.println("Vuelva a ingresar los datos");
+}
+
     }//GEN-LAST:event_IVAActionPerformed
 
     private void raizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raizActionPerformed
