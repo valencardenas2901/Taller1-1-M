@@ -2,7 +2,7 @@ package calculadora;
 
  /* Valentina Cardenas Mercado*/
 
-public class interfazGrafica extends javax.swing.JFrame {
+public class Calculadora.interfazGrafica extends javax.swing.JFrame {
 
     public interfazGrafica() {
         initComponents();
@@ -257,15 +257,63 @@ public class interfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_respuestaActionPerformed
 
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
-            
+          operacion.setText("+");
+    try{
+    String x0= num1.getText();
+    String y0= num2.getText();
+    float x = Float.valueOf(x0);
+    float y = Float.valueOf(y0);
+    double suma=x+y;
+    System.out.println(x+"+"+y+"="+suma);
+    suma=Math.round(suma*100.0)/100.0;
+    String s=Double.toString(suma);
+    respuesta.setText(s);
+        }
+catch(Exception erroresprod){
+    System.out.println("Se ha producido un error al entrar los datos: "+erroresprod);
+    System.out.println("Vuelva a ingresar los datos");
+}
+     
     }//GEN-LAST:event_sumaActionPerformed
 
     private void multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacionActionPerformed
-    
+        operacion.setText("x");
+    try{
+    String x0= num1.getText();
+    String y0= num2.getText();
+    float x = Float.valueOf(x0);
+    float y = Float.valueOf(y0);
+    double multiplicacion=x*y;
+    System.out.println(x+"*"+y+"="+multiplicacion);
+    multiplicacion=Math.round(multiplicacion*100.0)/100.0;
+    String s=Double.toString(multiplicacion);
+    respuesta.setText(s);
+        }
+catch(Exception erroresprod){
+    System.out.println("Se ha producido un error al entrar los datos: "+erroresprod);
+    System.out.println("Vuelva a ingresar los datos");
+}
+
     }//GEN-LAST:event_multiplicacionActionPerformed
 
     private void divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionActionPerformed
-    
+    operacion.setText("<html><strong>&#247;</strong></html>");
+    try{
+    String x0= num1.getText();
+    String y0= num2.getText();
+    float x = Float.valueOf(x0);
+    float y = Float.valueOf(y0);
+    double division=x/y;
+    System.out.println(x+"+"+y+"="+division);
+    division=Math.round(division*100.0)/100.0;
+    String s=Double.toString(division);
+    respuesta.setText(s);
+        }
+catch(Exception erroresprod){
+    System.out.println("Se ha producido un error al entrar los datos: "+erroresprod);
+    System.out.println("Vuelva a ingresar los datos");
+}
+
     }//GEN-LAST:event_divisionActionPerformed
 
     private void potenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potenciaActionPerformed
@@ -273,7 +321,23 @@ public class interfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_potenciaActionPerformed
 
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
-    
+        operacion.setText("-");
+    try{
+    String x0= num1.getText();
+    String y0= num2.getText();
+    float x = Float.valueOf(x0);
+    float y = Float.valueOf(y0);
+    double resta=x-y;
+    System.out.println(x+"+"+y+"="+resta);
+    resta=Math.round(resta*100.0)/100.0;
+    String s=Double.toString(resta);
+    respuesta.setText(s);
+        }
+catch(Exception erroresprod){
+    System.out.println("Se ha producido un error al entrar los datos: "+erroresprod);
+    System.out.println("Vuelva a ingresar los datos");
+}
+
     }//GEN-LAST:event_restaActionPerformed
 
     private void num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num1ActionPerformed
